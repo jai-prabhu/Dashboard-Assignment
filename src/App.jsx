@@ -13,7 +13,7 @@ export default function App() {
         <div className="h1">Executive Dashboards</div>
         <div className="row" style={{gap:8}}>
           <button className="btn secondary" onClick={()=>setOpenAll(true)}>Manage / Search Widgets</button>
-          <a className="btn" href="https://github.com/new" target="_blank" rel="noreferrer">Create GitHub Repo</a>
+          <a className="btn" href="https://github.com/jai-prabhu/Dashboard-Assignment" target="_blank" rel="noreferrer">Visit GitHub Repo</a>
         </div>
       </div>
 
