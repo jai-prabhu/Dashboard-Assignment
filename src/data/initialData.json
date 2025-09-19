@@ -1,0 +1,46 @@
+{
+  "categories": [
+    {
+      "id": "cat-cspm",
+      "name": "CSPM Executive Dashboard",
+      "widgetIds": [
+        "w1",
+        "w2"
+      ]
+    },
+    {
+      "id": "cat-kspm",
+      "name": "KSPM Overview",
+      "widgetIds": [
+        "w3"
+      ]
+    },
+    {
+      "id": "cat-cloud",
+      "name": "Cloud Compliance",
+      "widgetIds": []
+    }
+  ],
+  "widgets": {
+    "w1": {
+      "id": "w1",
+      "name": "Risk Posture",
+      "text": "Random text: Current risk posture is Stable."
+    },
+    "w2": {
+      "id": "w2",
+      "name": "Open Alerts",
+      "text": "Random text: 42 alerts require attention."
+    },
+    "w3": {
+      "id": "w3",
+      "name": "Asset Inventory",
+      "text": "Random text: 1,204 assets monitored."
+    },
+    "w4": {
+      "id": "w4",
+      "name": "Policy Drift",
+      "text": "Random text: No drifts detected in last 24h."
+    }
+  }
+}
