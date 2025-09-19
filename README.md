@@ -3,6 +3,9 @@
 A small dashboard app that renders **categories** containing **widgets**, driven by a JSON file.  
 You can **add new widgets** (name + text) into a category, **assign existing widgets** to multiple categories, **remove** widgets from a category, and **search** across all widgets. State persists locally via `localStorage`.
 
+## Deployment
+- Deployed on Vercel [DashBoard](https://dashboard-assignment-sable-one.vercel.app/)
+
 ## ✨ Features
 - **JSON-driven UI**: `src/data/initialData.json` defines `categories` and `widgets`.
 - **Add new widget to a category**: “+ Add Widget” opens a modal (name + text).
@@ -138,6 +141,3 @@ python -m http.server 8080
   - `removeWidgetFromCategory(categoryId, widgetId)`
   - `setCategories(categories)` / `setWidgets(widgets)`
 ---
-
-## Deployment
-- Deployed on Vercel [DashBoard](https://dashboard-assignment-sable-one.vercel.app/)
