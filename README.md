@@ -1,10 +1,10 @@
 # Executive Dashboards — Frontend Assignment (React + Vite + Zustand)
 
 A small dashboard app that renders **categories** containing **widgets**, driven by a JSON file.  
-You can **add new widgets** (name + random text) into a category, **assign existing widgets** to multiple categories, **remove** widgets from a category, and **search** across all widgets. State persists locally via `localStorage`.
+You can **add new widgets** (name + text) into a category, **assign existing widgets** to multiple categories, **remove** widgets from a category, and **search** across all widgets. State persists locally via `localStorage`.
 
 ## ✨ Features
-- **JSON‑driven UI**: `src/data/initialData.json` defines `categories` and `widgets`.
+- **JSON-driven UI**: `src/data/initialData.json` defines `categories` and `widgets`.
 - **Add new widget to a category**: “+ Add Widget” opens a modal (name + text).
 - **Assign existing widgets to categories**: “Manage / Search Widgets” → checkbox per category.
 - **Remove widget from a category**: ❌ on each widget card.
@@ -55,15 +55,71 @@ frontend-dashboard-assignment/
 - Widgets live in a flat dictionary keyed by ID.
 - You can add/remove categories or widgets in this file to change what renders.
 
-## ▶️ Getting Started
-**Requirements**: Node.js 18+ and npm.
+---
 
+## 💻 Local Setup & Deployment (Step‑by‑Step)
+
+### 1. Prerequisites
+- **Node.js 22+** and **npm**  
+  Check versions:
+  ```bash
+  node -v
+  npm -v
+  ```
+
+### 2. Get the code
+- **Option A:** Download the ZIP and unzip it.
+- **Option B:** Clone the Repo using git clone:
+  ```bash
+  git clone https://github.com/jai-prabhu/Dashboard-Assignment.git
+  cd frontend-dashboard-assignment
+  ```
+
+### 3. Install dependencies
 ```bash
 npm install
-npm run dev
 ```
 
-Vite will print a local URL (usually http://localhost:5173).
+### 4. Run in development (hot‑reload)
+```bash
+npm run dev
+```
+- Vite will print a local URL (usually **http://localhost:5173**).  
+- To run on a specific port:
+  ```bash
+  npm run dev -- --port 5174
+  ```
+- To expose on your LAN (so phones on Wi‑Fi can see it):
+  ```bash
+  npm run dev -- --host
+  ```
+
+### 5. Create a production build
+```bash
+npm run build
+```
+This outputs static files to **`dist/`**.
+
+### 6. Preview the production build locally (recommended)
+```bash
+npm run preview
+```
+Vite serves the **dist/** build at a local URL for final verification.
+
+### 7. (Alternative) Serve `dist/` with any static server
+If you prefer another static server:
+```bash
+# using 'serve' (installs a small static server)
+npx serve -s dist
+
+# using http-server
+npx http-server dist
+
+# or Python 3 (no SPA rewrites needed here since there’s no client routing)
+cd dist
+python -m http.server 8080
+```
+---
 
 ## 🧪 Useful Scripts
 ```json
@@ -81,37 +137,4 @@ Vite will print a local URL (usually http://localhost:5173).
   - `addExistingWidgetToCategory(categoryId, widgetId)`
   - `removeWidgetFromCategory(categoryId, widgetId)`
   - `setCategories(categories)` / `setWidgets(widgets)`
-
-## 🖱️ How to Use
-- **Add a new widget**: Open a category → **+ Add Widget** → fill *name* and *text* → **Add**.
-- **Assign existing widgets**: Top-right **Manage / Search Widgets** → use the search box → tick/untick per category.
-- **Remove from category**: Click ❌ on the widget tile.
-- **Persistence**: Refresh the page—your changes remain.
-
-## 🎨 Customization
-- **Theme**: `src/styles.css` — tweak CSS variables at the top.
-- **Data**: Edit `src/data/initialData.json`. IDs should be unique strings.
-- **Layout**: Category layout is grid-based inside `CategoryCard.jsx`.
-
-## 🚀 Deployment
-Any static host works (this is a pure SPA):
-- **Vercel**: Build `npm run build`, output directory: `dist`.
-- **Netlify**: Build command `npm run build`, publish directory `dist`.
-- **GitHub Pages**: Set `base` in `vite.config.js`, then `gh-pages -d dist`.
-
-## 🧭 Notes / Gotchas
-- If you change `base` for GitHub Pages, rebuild before deploying.
-- This app does not include routing; no special SPA rewrites are needed.
-- LocalStorage keys: `dashboard-assignment`.
-
-## 🗺️ Roadmap / Nice-to-haves
-- Category CRUD (add/rename/delete categories)
-- Drag-and-drop ordering for categories and widgets
-- Inline widget editing
-- Tests (React Testing Library + Vitest)
-- TypeScript typings
-- Accessibility pass (focus traps in modals, ARIA labels)
-
 ---
-
-**License**: Add your preferred license (MIT recommended).
