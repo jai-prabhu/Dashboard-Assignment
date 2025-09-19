@@ -138,3 +138,6 @@ python -m http.server 8080
   - `removeWidgetFromCategory(categoryId, widgetId)`
   - `setCategories(categories)` / `setWidgets(widgets)`
 ---
+
+## Deployment
+- Deployed on Vercel [DashBoard](https://dashboard-assignment-sable-one.vercel.app/)
